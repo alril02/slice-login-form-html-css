@@ -1,0 +1,137 @@
+/* 1. Dasar (body, tipografi) */
+* { box-sizing: border-box; }
+
+:root {
+    --warna-utama: #c026d3;
+    --warna-sekunder: #7c5cfc;
+    --warna-latar: #fdf0ff;
+    --warna-teks: #111827;
+    --warna-redup: #6b7280;
+    --warna-link: #4350b8;
+    --warna-garis: #d1d5db;
+}
+
+body {
+    margin: 0;
+    font-family:'Segoe UI', Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: var(--warna-teks);
+    background-color: var(--warna-latar);
+}
+
+a {
+  color: var(--warna-link);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+/* 2. Layout umum (header, nav, main, footer) */
+.halaman {
+    max-width: 400px; margin: 0 auto; padding: 48px 24px 32px;
+}
+
+header {
+    text-align: center
+}
+
+header h1 {
+    margin: 32px 0 40px; font-size: 2rem;
+}
+
+footer {
+    text-align: center; margin: 32px 0 0; font-size: 0.875rem; color: var(--warna-redup);
+}
+
+/* 3. Komponen (kartu, tombol, tabel, form) */
+label { display: block; margin-bottom: 8px; }
+
+input {
+    display: block;
+    width: 100%;
+    padding: 14px 16px 14px 48px;
+    border: 0;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+    font: inherit;
+    background-repeat: no-repeat;
+    background-position: 16px center;
+    background-size: 23px;
+}
+
+.bidang { margin-bottom: 28px; }
+
+input::placeholder { color: var(--warna-redup) }
+input:focus { outline: 3px solid var(--warna-sekunder); outline-offset: 2px; }
+
+.baris-label label, .baris-label a {
+    display: inline-block;
+    width: 49%;
+}
+
+.baris-label a {
+    text-align: right;
+    font-size: 0.875rem;
+}
+
+
+#email {
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='3' y='5' width='18' height='14' rx='2'/><path d='m3 7 9 6 9-6'/></svg>");
+}
+
+#password {
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='5' y='11' width='14' height='10' rx='2'/><path d='M8 11V8a4 4 0 0 1 8 0v3'/></svg>");
+}
+
+.tombol-masuk {
+    display: block;
+    width: 100%;
+    padding: 12px 16px;
+    border: 0;
+    border-radius: 12px;
+    background-image: linear-gradient(90deg, var(--warna-utama), var(--warna-sekunder));
+    box-shadow: 0 4px 10px rgba(124, 92, 252, 0.4);
+    font: inherit;
+    font-size: 1.125rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: white;
+    cursor: pointer;
+}
+
+fieldset { 
+    margin: 32px 0 0;
+    padding: 0;
+    border: 0;
+    border-top: 1px solid var(--warna-garis);
+    text-align: center;
+}
+
+fieldset legend {
+    margin: 0 auto;
+    padding: 0 12px;
+    font-size: 0.9rem;
+    color: var(--warna-redup);
+}
+
+.social button {
+    display: inline-block;
+    width: 44px;
+    height: 44px;
+    margin: 20px 12px 0;
+    border: 0;
+    border-radius: 50%;
+    background-color: #f1d9fb;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .18);
+    font: inherit;
+    font-size: 1.25rem;
+    font-weight: 700;
+    cursor: pointer;
+    align-items: center;
+}
+
+/* 4. Utilitas (kelas pembantu) */
